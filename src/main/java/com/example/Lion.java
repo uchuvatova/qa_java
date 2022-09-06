@@ -1,38 +1,25 @@
 package com.example;
-
 import java.util.List;
 
 public class Lion extends Animal implements Predator {
-
     boolean hasMane;
+    int kittensCount;
 
     public Lion(String sex) throws Exception {
-        if ("Самец".equals(sex)) {
+           if ("Самец".equals(sex)) {
             hasMane = true;
+            kittensCount = 0;
         } else if ("Самка".equals(sex)) {
             hasMane = false;
+            kittensCount = 1;
         } else {
             throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
-
-    //Predator predator;
-
-    //public Lion (Feline feline) {
-        //this.predator = feline;}
-
     public int getKittens() {
-        return getKittens(1);
-    }
-
-    public int getKittens(int kittensCount) {
-        return kittensCount;
-    }
-
+        return kittensCount;}
     public boolean doesHaveMane() {
-        return hasMane;
-    }
-
+        return hasMane;}
     @Override
     public List<String> eatMeat() throws Exception {
         return getFood("Хищник");
