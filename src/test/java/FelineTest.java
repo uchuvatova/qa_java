@@ -7,10 +7,10 @@ public class FelineTest {
     @Test
     public void checkFamilyNameIsFeline() {
         Feline feline = new Feline();
-        assertEquals(feline.getFamily(), "Кошачьи");}
+        assertEquals("Кошачьи", feline.getFamily());}
 
     @Test
     public void getKittensOneAmountShowsOk() {
         Feline feline = new Feline();
-        assertEquals(feline.getKittens(), 1);}
+        assertEquals(1, feline.getKittens());}
 }
