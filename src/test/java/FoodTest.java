@@ -1,5 +1,4 @@
 import com.example.Animal;
-import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -7,7 +6,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-@RunWith(Parameterized.class) // Напиши аннотацию для параметризованных тестов
+@RunWith(Parameterized.class)
 public class FoodTest {
 
     private final String animalKind;
