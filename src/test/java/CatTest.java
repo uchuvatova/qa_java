@@ -22,7 +22,7 @@ public class CatTest {
     @Test
     public void checkCatGetSoundMeow() {
         Cat cat = new Cat(feline);
-        assertEquals(cat.getSound(), "Мяу");}
+        assertEquals("Мяу", cat.getSound());}
 
 
 }
