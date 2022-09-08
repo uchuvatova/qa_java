@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
+
 
 @RunWith(Parameterized.class)
 public class FoodTest {
@@ -23,18 +23,9 @@ public class FoodTest {
                 { List.of("Животные", "Птицы", "Рыба"), "Хищник"},};
     }
     @Test
-    public void getFoodSomeAnimalKindShowsFood() throws Exception {
+    public void getFoodAnimalKindShowsFood() throws Exception {
         Animal animal = new Animal();
         List<String> actual = animal.getFood(animalKind);
         assertEquals(expected, actual);
     }
-
-    @Test
-    public void incorrectAnimalKindShouldThrowException()  {
-        Exception e = assertThrows(Exception.class, () -> {
-            Animal animal = new Animal();
-            animal.getFood("Всеядное");});
-        String expected = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
-        String actual = e.getMessage();
-        assertEquals(expected, actual);}
 }
