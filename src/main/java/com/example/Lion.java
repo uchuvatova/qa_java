@@ -1,9 +1,10 @@
 package com.example;
 import java.util.List;
 
-public class Lion  {
-    private final Feline feline;
+public class Lion {
+
     boolean hasMane;
+    Feline feline;
 
     public Lion(String sex, Feline feline) throws Exception {
         this.feline = feline;
@@ -21,7 +22,6 @@ public class Lion  {
     }
 
     public boolean doesHaveMane() {
-
         return hasMane;
     }
 
@@ -29,4 +29,3 @@ public class Lion  {
         return feline.getFood("Хищник");
     }
 }
-
